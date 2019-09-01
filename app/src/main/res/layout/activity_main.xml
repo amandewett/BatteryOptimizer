@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:scrollbarStyle="outsideOverlay"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background"
+    android:id="@+id/scrollview"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/mainRelativeLaoyout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/settings_button"
+                android:layout_width="40dp"
+                android:paddingEnd="10dp"
+                android:tooltipText="Settings"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:drawableEnd="@drawable/ic_settings"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/batteryImageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:gravity="center_horizontal"
+            android:padding="30dp">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/ram_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="210dp"
+                android:tooltipText="Ram Information"
+                android:hapticFeedbackEnabled="true"
+                android:background="@drawable/ripple_float"
+                android:src="@drawable/ic_memory"
+                android:onClick="ramInfo"
+                app:backgroundTint="@color/float_color"
+                app:pressedTranslationZ="12dp"
+                app:fabSize="mini"/>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/battery_image_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="@drawable/ripple"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/colorPrimary"
+                android:elevation="8dp"
+                app:cardCornerRadius="10dp"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/batteryImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:src="@drawable/ic_battery_charging_50"/>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/batteryTextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:layout_below="@id/batteryImageLayout">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/battery_text_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorPrimary"
+                android:foreground="@drawable/ripple"
+                android:clickable="true"
+                android:elevation="8dp"
+                app:cardCornerRadius="10dp"
+                android:focusable="true">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/batteryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:drawablePadding="10dp"
+                    android:layout_marginEnd="12dp"
+                    android:drawableStart="@drawable/ic_battery_percentage_not_charging"
+                    android:text="100%"
+                    android:textColor="@color/batteryPercentText"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tempText"
+                    android:layout_below="@+id/batteryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:drawablePadding="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:drawableStart="@drawable/ic_temprature"
+                    android:text="00.0°C"
+                    android:textColor="@color/batteryPercentText"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/buttonrelative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom|center_horizontal"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="50dp"
+            android:layout_below="@+id/batteryTextLayout">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/button1"
+                android:layout_width="250dp"
+                android:layout_height="55dp"
+                app:cardBackgroundColor="@color/float_color"
+                android:elevation="8dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ripple"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical|center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/button_text"
+                        android:drawableStart="@drawable/ic_optimize"
+                        android:text="@string/button1text"
+                        android:textSize="30sp"/>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/fab_menu_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:paddingBottom="50dp"
+                fab:menu_backgroundColor="#A6313131"
+                fab:menu_colorNormal="@color/float_color"
+                fab:fab_showShadow="true"
+                fab:menu_labels_colorNormal="@color/float_color"
+                fab:menu_labels_colorPressed="#444444"
+                fab:menu_labels_colorRipple="#66FFFFFF"
+                app:menu_labels_textColor="@android:color/white"
+                fab:menu_labels_showShadow="true"
+                fab:menu_labels_maxLines="-1"
+                fab:menu_labels_position="left"
+                fab:menu_openDirection="up"
+                fab:menu_animationDelayPerItem="40"
+                fab:fab_shadowColor="#66000000"
+                fab:menu_labels_ellipsize="end"
+                fab:menu_labels_singleLine="true">
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/batteryInformationButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="#FFFFFF"
+                    android:src="@drawable/ic_battery_fab_information"
+                    fab:fab_label="@string/battery_manager"
+                    fab:fab_size="mini" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/batterySaverFloatButton"
+                    android:layout_width="wrap_content"
+                    fab:fab_colorNormal="#FFFFFF"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_fab_battery_manager"
+                    fab:fab_label="@string/battery_saver"
+                    fab:fab_size="mini" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/batteryStatsFloatButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="#FFFFFF"
+                    android:src="@drawable/ic_fab_battery_stats"
+                    fab:fab_label="@string/battery_stats"
+                    fab:fab_size="mini" />
+
+            </com.github.clans.fab.FloatingActionMenu>
+        </android.support.design.widget.CoordinatorLayout>
+    </RelativeLayout>
+</ScrollView>

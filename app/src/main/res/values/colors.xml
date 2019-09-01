@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3441A2</color>
+    <color name="colorPrimaryDark">#243181</color>
+    <color name="colorAccent">#F50057</color>
+    <color name="buttoncolor">#80FFFFFF</color>
+    <color name="batteryPercentText">#EEEEEE</color>
+    <color name="background">#3F51B5</color>
+    <color name="battery_card_background">#3A4DB3</color>
+    <color name="float_color">#E91E63</color>
+    <color name="float_color1">#75FFFFFF</color>
+    <color name="button_text">#FFFFFF</color>
+    <color name="battery_green">#64DD17</color>
+    <color name="battery_red">#C62828</color>
+    <color name="battery_yellow">#FF8F00</color>
+    <color name="transparent">#00000000</color>
+    <color name="dark">#3C3C3C</color>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Disable Services">
+        <SwitchPreference
+            android:key="wifi_switch"
+            android:title="Wifi"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:key="bluetooth_switch"
+            android:title="Bluetooth"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:key="brightness_switch"
+            android:title="Brightness"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Battery Values">
+    <SwitchPreference
+        android:key="temperature_switch"
+        android:title="Battery Temperature Value"
+        android:defaultValue="false"/>
+        <SwitchPreference
+            android:key="voltage_switch"
+            android:title="Battery Voltage Value"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:key="memory_switch"
+            android:title="Memory value"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+    android:title="Notifications">
+    <SwitchPreference
+        android:key="notification_switch"
+        android:title="Battery low notification"
+        android:defaultValue="true"/>
+        <SwitchPreference
+            android:key="ongoing_notification_switch"
+            android:title="Ongoing Notification"
+            android:defaultValue="true"/>
+</PreferenceCategory>
+
+
+</PreferenceScreen>
